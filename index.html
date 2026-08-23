@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./analytics.js" defer></script>
+<style>
+/* The dc runtime re-serialises inline styles ("repeat(3, 1fr)"), so each
+   selector below matches on a fragment that survives that pass. */
+img,video{max-width:100%}
+@media (max-width:900px){
+  [style*="max-width: 1180px"],[style*="max-width:1180px"],
+  [style*="position: sticky"],[style*="position:sticky"]{padding-left:22px!important;padding-right:22px!important}
+  [style*="repeat(4,"],[style*="1.1fr"],[style*="1.4fr"],[style*="1.35fr"]{grid-template-columns:1fr!important}
+  [style*="repeat(3,"]{grid-template-columns:repeat(2,1fr)!important}
+}
+@media (max-width:620px){
+  [style*="gap: 26px"],[style*="gap:26px"]{gap:13px!important;flex-wrap:wrap;justify-content:flex-end}
+  [style*="repeat(3,"]{grid-template-columns:1fr!important}
+  /* the credit row and the media-kit stamp collide once the credit wraps */
+  #credit{flex-direction:column;gap:6px;line-height:1.5!important}
+  /* founder quote: the 150px portrait leaves the pull-quote a few words wide */
+  [style*="gap: 34px"],[style*="gap:34px"]{grid-template-columns:1fr!important;padding:26px 22px!important;gap:20px!important}
+  [style*="width: 150px"],[style*="width:150px"]{width:88px!important;height:88px!important}
+}
+</style>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{margin:0;background:#f2f8ef}a{color:#c1440a}a:hover{color:#8f320a}</style></helmet>
+
+<div style="font-family:Archivo,system-ui,sans-serif;background:#f2f8ef;color:#12160f;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:20;background:#12160f;padding:11px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div style="display:flex;align-items:center;gap:11px">
+      <img src="assets/app-icon.png" alt="Puking Cat app icon" style="width:30px;height:30px;border-radius:7px;display:block">
+      <span style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#c6ff4f">PUKING CAT — PRESS KIT</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:26px">
+      <a href="#facts" style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#9fae98;text-decoration:none" style-hover="color:#c6ff4f">FACTS</a>
+      <a href="#about" style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#9fae98;text-decoration:none" style-hover="color:#c6ff4f">ABOUT</a>
+      <a href="#shots" style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#9fae98;text-decoration:none" style-hover="color:#c6ff4f">SCREENSHOTS</a>
+      <a href="#assets" style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#9fae98;text-decoration:none" style-hover="color:#c6ff4f">ASSETS</a>
+      <a href="#contact" style="padding:9px 15px;background:#c6ff4f;color:#12160f;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s" style-hover="background:#ff6a1f;color:#fff">PRESS CONTACT</a>
+    </div>
+  </div>
+
+  <div style="max-width:1180px;margin:0 auto;padding:44px 40px 0;display:grid;grid-template-columns:1.35fr .78fr;gap:48px;align-items:stretch">
+    <div style="display:flex;flex-direction:column;justify-content:space-between">
+      <div style="display:inline-block;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.13em;color:#12160f;background:#c6ff4f;padding:5px 8px">MEDIA KIT · CLEARED FOR PUBLICATION</div>
+      <h1 style="margin:16px 0 0;max-width:20ch;font:800 60px/1 Archivo,sans-serif;letter-spacing:-.035em;text-wrap:balance">Your cat has one job: ruin the room.</h1>
+      <p style="margin:20px 0 0;max-width:52ch;font:400 17px/1.6 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Puking Cat is a casual mobile game where your cat tries to ruin the room by puking on as many things as possible. Free with ads on iPhone and iPad, with an optional subscription to remove them.</p>
+      <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:10px">
+        <a href="#assets" style="padding:14px 22px;background:#12160f;color:#c6ff4f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s,transform .15s" style-hover="background:#ff6a1f;color:#fff;transform:translateY(-2px)">DOWNLOAD FULL KIT ↓</a>
+        <a href="#shots" style="padding:14px 22px;border:1px solid rgba(18,22,15,.28);color:#12160f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:border-color .15s,background .15s" style-hover="background:#c6ff4f;border-color:#c6ff4f">SCREENSHOTS</a>
+      </div>
+      <div style="margin-top:20px;font:400 11.5px/1.6 'JetBrains Mono',monospace;color:#4d5849">APP STORE: <a href="https://apps.apple.com/app/id6787404657" style="color:#c1440a">apps.apple.com/app/id6787404657</a> · WEBSITE: <a href="https://happycode.studio/pukingcat/" style="color:#c1440a">happycode.studio/pukingcat</a></div>
+      <div id="facts" style="margin-top:28px;padding-top:22px;border-top:1px solid rgba(18,22,15,.18);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;scroll-margin-top:70px">
+        <div>
+          <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">FEATURES</div>
+          <ul style="margin:0;padding-left:17px;font:400 14px/1.6 Archivo,sans-serif;color:#333a30">
+            <li>Short mess-making levels, three-star scoring</li>
+            <li>Puke Coins earned through play</li>
+            <li>Cat costumes + collectible puke palettes</li>
+            <li>Seasonal rooms and object layouts</li>
+            <li>All gameplay levels free with ads</li>
+            <li>Optional ad-free subscription, no paywalled levels</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">QUICK FACTS</div>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font:400 12.5px/1.45 'JetBrains Mono',monospace">
+            <div style="color:#5f6a5b">GENRE</div><div>Casual mobile game</div>
+            <div style="color:#5f6a5b">PLATFORM</div><div>iPhone, iPad</div>
+            <div style="color:#5f6a5b">PRICE</div><div>Free with ads</div>
+            <div style="color:#5f6a5b">IAP</div><div>Optional ad-free sub</div>
+            <div style="color:#5f6a5b">LEVELS</div><div>Seasonal rooms, added regularly</div>
+            <div style="color:#5f6a5b">RELEASED</div><div>4 August 2026</div>
+            <div style="color:#5f6a5b">REQUIRES</div><div>iOS 15.0 or later</div>
+            <div style="color:#5f6a5b">RATING</div><div>9+</div>
+            <div style="color:#5f6a5b">LANGUAGE</div><div>English at launch</div>
+            <div style="color:#5f6a5b">DEV</div><div>Ivanna Kaceviča, Latvia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;align-self:start">
+      <div style="position:absolute;inset:14px -14px -14px 14px;background:#c6ff4f"></div>
+      <img src="assets/key-art.png" alt="Puking Cat key art" style="position:relative;width:100%;height:auto;display:block;border:1px solid rgba(18,22,15,.2)">
+    </div>
+  </div>
+
+  <div id="about" style="max-width:1180px;margin:44px auto 0;padding:0 40px;display:grid;grid-template-columns:1.4fr 1fr;gap:52px;scroll-margin-top:70px">
+    <div>
+      <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">ABOUT THE GAME</div>
+      <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Puking Cat turns a familiar cat-owner problem into the whole point of the game. The cat is not sick by accident — it is trying to cause damage. Players aim the puke at furniture, food, plants, books and anything else within reach; the more objects hit, the bigger the mess and the better the score.</p>
+      <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Levels are short and replayable with a three-star score to chase. Players earn Puke Coins and spend them on cat costumes and collectible puke palettes. New levels arrive regularly, following the calendar from autumn and Halloween through winter, spring and summer.</p>
+      <p style="margin:0;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">It is not a cat simulator and not a game about cleaning up after a pet. The joke is narrower: cats somehow puke on exactly the things you wish they would avoid. That becomes the mechanic.</p>
+    </div>
+    <div>
+      <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">WHY IT EXISTS</div>
+      <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">The idea came from real life with our cats — the sense that a cat puking on the rug, the blanket, or the one thing you least want ruined can't possibly be an accident.</p>
+      <p style="margin:0;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">It sat in Apple Notes for years before becoming a real game, built over two months of weekends for RevenueCat Shipaton 2026, with a lot of attention paid to small UI details and polish — even when the premise is ridiculous.</p>
+    </div>
+  </div>
+
+  <div style="max-width:1180px;margin:44px auto 0;padding:0 40px">
+    <div style="background:#12160f;padding:38px 44px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center">
+      <img src="assets/app-icon.png" alt="Puking Cat character" style="width:150px;height:150px;border-radius:24px;display:block">
+      <div>
+        <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#ff6a1f;margin-bottom:14px">FOUNDER QUOTE</div>
+        <p style="margin:0;max-width:62ch;font:400 20px/1.5 Archivo,sans-serif;color:#f2f8ef;text-wrap:pretty">“We used to joke that whenever one of our cats puked, it somehow managed to land on the rug, the blanket, or whatever was hardest to clean. I wrote down the idea for a game where the cat was doing that on purpose. Years later, it finally became Puking Cat.”</p>
+        <div style="margin-top:14px;font:500 11px/1.5 'JetBrains Mono',monospace;letter-spacing:.06em;color:#9fae98">TWO MONTHS OF WEEKENDS · REVENUECAT SHIPATON 2026 · LATVIA</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shots" style="max-width:1180px;margin:44px auto 0;padding:0 40px;scroll-margin-top:70px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid rgba(18,22,15,.18)">
+      <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b">GAME SCREENSHOTS — iPHONE, LANDSCAPE 2778×1284 PNG</div>
+      <a href="press-kit.zip" download style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#c1440a;text-decoration:none" style-hover="color:#12160f">DOWNLOAD ALL SCREENSHOTS ↓</a>
+    </div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <a href="assets/screenshots/01-main-menu.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/01-main-menu.webp" alt="MAIN MENU - LIVING ROOM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">MAIN MENU — LIVING ROOM</div></a>
+      <a href="assets/screenshots/02-aim-living-room.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/02-aim-living-room.webp" alt="AIMING - ANGLE DIAL AND POWER METER" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">AIMING — ANGLE DIAL AND POWER METER</div></a>
+      <a href="assets/screenshots/03-shot-living-room.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/03-shot-living-room.webp" alt="MID-SHOT - LIVING ROOM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">MID-SHOT — LIVING ROOM</div></a>
+      <a href="assets/screenshots/04-gameplay-bedroom.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/04-gameplay-bedroom.webp" alt="GAMEPLAY - BEDROOM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">GAMEPLAY — BEDROOM</div></a>
+      <a href="assets/screenshots/05-vet-grooming-room.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/05-vet-grooming-room.webp" alt="GAMEPLAY - VET GROOMING ROOM" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">GAMEPLAY — VET GROOMING ROOM</div></a>
+      <a href="assets/screenshots/06-level-complete.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/06-level-complete.webp" alt="LEVEL COMPLETE - THREE STARS" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">LEVEL COMPLETE — THREE STARS</div></a>
+      <a href="assets/screenshots/07-buildings.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/07-buildings.webp" alt="LEVEL SELECT - BUILDINGS" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">LEVEL SELECT — BUILDINGS</div></a>
+      <a href="assets/screenshots/08-shop-wardrobe.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/08-shop-wardrobe.webp" alt="SHOP - CAT COSTUMES" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">SHOP — CAT COSTUMES</div></a>
+      <a href="assets/screenshots/09-shop-palettes.webp" target="_blank" rel="noopener" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="aspect-ratio:2778/1284;overflow:hidden;background:#12160f"><img src="assets/screenshots/09-shop-palettes.webp" alt="SHOP - PUKE PALETTES" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#333a30">SHOP — PUKE PALETTES</div></a>
+    </div>
+  </div>
+
+  <div id="assets" style="max-width:1180px;margin:44px auto 0;padding:0 40px;scroll-margin-top:70px">
+    <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;padding-bottom:14px;border-bottom:1px solid rgba(18,22,15,.18)">BRAND ASSETS</div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+      <div style="border:1px solid rgba(18,22,15,.18);background:#fff;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)">
+        <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:16px"><img src="assets/app-icon.png" alt="App icon" style="width:100%;border-radius:16px;display:block"></div>
+        <div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;color:#333a30"><span>APP ICON</span><span style="color:#c1440a">PNG 1024²</span></div>
+      </div>
+      <div style="border:1px solid rgba(18,22,15,.18);background:#fff;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)">
+        <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:16px"><img src="assets/logo.png" alt="Logo" style="width:100%;display:block"></div>
+        <div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;color:#333a30"><span>LOGO</span><span style="color:#c1440a">PNG + SVG</span></div>
+      </div>
+      <div style="border:1px solid rgba(18,22,15,.18);background:#fff;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)">
+        <div style="aspect-ratio:1;overflow:hidden"><img src="assets/key-art.png" alt="Key art" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+        <div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;color:#333a30"><span>KEY ART</span><span style="color:#c1440a">PNG</span></div>
+      </div>
+      <a href="assets/gameplay-clip.mp4" target="_blank" rel="noopener" aria-label="Gameplay clip" style="display:block;border:1px solid rgba(18,22,15,.18);background:#fff;text-decoration:none;transition:border-color .15s,transform .15s" style-hover="border-color:#12160f;transform:translateY(-3px)"><div style="position:relative;aspect-ratio:1;overflow:hidden"><img src="assets/gameplay-poster.webp" alt="Gameplay clip" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><span style="width:46px;height:46px;border-radius:50%;background:rgba(18,22,15,.72);border:1px solid rgba(242,248,239,.5);display:flex;align-items:center;justify-content:center;font:400 13px/1 sans-serif;color:#c6ff4f;padding-left:3px">&#9654;</span></span></div><div style="padding:11px 12px;border-top:1px solid rgba(18,22,15,.12);display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;color:#333a30"><span>GAMEPLAY CLIP</span><span style="color:#c1440a">MP4 · 30s</span></div></a>
+    </div>
+    <div style="margin-top:16px;font:400 11.5px/1.6 'JetBrains Mono',monospace;color:#4d5849">MEDIA FOLDER: <a href="https://github.com/evanca/pukingcat/tree/main/assets" style="color:#c1440a">github.com/evanca/pukingcat/assets</a></div>
+  </div>
+
+  <div id="contact" style="max-width:1180px;margin:44px auto 0;padding:0 40px 56px;scroll-margin-top:70px">
+    <div style="background:#c6ff4f;padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap">
+      <div>
+        <div style="font:600 26px/1.2 Archivo,sans-serif;letter-spacing:-.02em">Press, review codes, interviews</div>
+        <div style="margin-top:8px;font:400 13.5px/1.5 Archivo,sans-serif;color:#2c3329">Boilerplate above may be used verbatim. Assets are cleared for editorial use.</div>
+      </div>
+      <a href="mailto:info@happycode.studio" style="padding:15px 24px;background:#12160f;color:#c6ff4f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s" style-hover="background:#ff6a1f;color:#fff">info@happycode.studio →</a>
+    </div>
+    <div style="margin-top:20px"><a href="https://www.producthunt.com/products/puking-cat-the-game?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-puking-cat-the-game" target="_blank" rel="noopener noreferrer" aria-label="Puking Cat The Game on Product Hunt" style="display:inline-block;line-height:0"><img alt="Puking Cat The Game - Your cat has one job: ruin the room. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1227536&amp;theme=light&amp;t=1787491159815" style="display:block"></a></div>
+    <div style="margin-top:16px;font:400 11px/1.9 'JetBrains Mono',monospace;letter-spacing:.06em;color:#5f6a5b">PRIVACY: <a href="https://happycode.studio/terms/apps/Puking-Cat" style="color:#c1440a">happycode.studio/terms/apps/Puking-Cat</a> · SUPPORT: <a href="mailto:info@happycode.studio" style="color:#c1440a">info@happycode.studio</a> · FACEBOOK: <a href="https://www.facebook.com/profile.php?id=61593791362879" style="color:#c1440a">Puking Cat Game</a></div><div id="credit" style="margin-top:16px;display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#5f6a5b"><span>PUKING CAT THE GAME · MADE IN LATVIA BY IVANNA KACEVIČA</span><span>MEDIA KIT 2026</span></div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
