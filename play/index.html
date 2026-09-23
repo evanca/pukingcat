@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12160f">
+<title>Play Puking Cat</title>
+<link rel="icon" href="../assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>window.GA_MEASUREMENT_ID="G-7R9GHRN17S";</script>
+<script src="../analytics.js" defer></script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#12160f;color:#f2f8ef;font-family:Archivo,system-ui,sans-serif}
+  main{width:min(440px,100%);text-align:center}
+  .icon{width:112px;height:112px;border-radius:24px;display:block;margin:0 auto;box-shadow:0 0 0 1px rgba(242,248,239,.15)}
+  .kicker{margin:22px 0 0;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#c6ff4f}
+  h1{margin:12px 0 0;font:800 44px/1 Archivo,sans-serif;letter-spacing:-.035em;text-wrap:balance}
+  p{margin:14px 0 0;font:400 16px/1.55 Archivo,sans-serif;color:#9fae98;text-wrap:pretty}
+  .stores{margin-top:30px;display:grid;gap:12px}
+  .store{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:#c6ff4f;color:#12160f;text-decoration:none;font:500 13px/1 'JetBrains Mono',monospace;letter-spacing:.1em;transition:background .15s,color .15s,transform .15s}
+  .store:hover{background:#ff6a1f;color:#fff;transform:translateY(-2px)}
+  .store i{font-size:22px;width:28px;text-align:center}
+  .store .label{display:flex;align-items:center;gap:14px}
+  .store .arrow{font-size:16px}
+  .foot{margin-top:34px;font:500 10.5px/1.6 'JetBrains Mono',monospace;letter-spacing:.06em;color:#5f6a5b}
+  .foot a{color:#9fae98;text-decoration:none}
+  .foot a:hover{color:#c6ff4f}
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="../assets/app-icon.png" alt="Puking Cat app icon">
+  <div class="kicker">PUKING CAT — FREE CASUAL GAME</div>
+  <h1>Your cat has one job: ruin the room.</h1>
+  <p>Pick your store and start puking on things.</p>
+  <div class="stores">
+    <a id="ios" class="store" href="https://apps.apple.com/app/apple-store/id6787404657" aria-label="APP STORE"><span class="label"><i class="fa-brands fa-apple" aria-hidden="true"></i>APP STORE</span><span class="arrow">→</span></a>
+    <a id="android" class="store" href="https://play.google.com/store/apps/details?id=studio.happycode.puking_cat" aria-label="GOOGLE PLAY"><span class="label"><i class="fa-brands fa-google-play" aria-hidden="true"></i>GOOGLE PLAY</span><span class="arrow">→</span></a>
+    <a id="galaxy" class="store" href="https://galaxystore.samsung.com/detail/studio.happycode.puking_cat" aria-label="GALAXY STORE"><span class="label"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>GALAXY STORE</span><span class="arrow">→</span></a>
+  </div>
+  <div class="foot">FREE WITH ADS · NO PAYWALLED LEVELS · <a href="../">PRESS KIT</a></div>
+</main>
+<script>
+(function () {
+  // utm_* on this page's own URL (e.g. /pukingcat/play/?utm_source=tiktok) are
+  // forwarded to every store link; anything missing falls back to the defaults.
+  var APPLE_PT = '122120935'; // App Store Connect > Analytics > Campaigns > provider id
+  var incoming = new URLSearchParams(location.search);
+  var utm = {
+    utm_source: incoming.get('utm_source') || 'happycode.studio',
+    utm_medium: incoming.get('utm_medium') || 'web',
+    utm_campaign: incoming.get('utm_campaign') || 'play_page'
+  };
+  ['utm_term', 'utm_content'].forEach(function (k) { if (incoming.get(k)) utm[k] = incoming.get(k); });
+  [['ios', 'app_store'], ['android', 'google_play'], ['galaxy', 'galaxy_store']].forEach(function (pair) {
+    var link = document.getElementById(pair[0]);
+    var url = new URL(link.href);
+    var params = Object.assign({}, utm, { utm_content: utm.utm_content || pair[1] });
+    if (pair[0] === 'ios') {
+      // apps.apple.com 301s away every utm_* param (verified 2026-09-12); only
+      // Apple's own campaign params survive. ct = "<source>_<campaign>", and pt
+      // (the App Store Connect provider token) makes it show up in ASC Analytics.
+      url.searchParams.set('ct', (params.utm_source + '_' + params.utm_campaign).replace(/[^A-Za-z0-9_.-]/g, '_').slice(0, 40));
+      if (APPLE_PT) url.searchParams.set('pt', APPLE_PT);
+      url.searchParams.set('mt', '8');
+    } else {
+      Object.keys(params).forEach(function (k) { url.searchParams.set(k, params[k]); });
+    }
+    // Play hands `referrer` to the app through the Install Referrer API, so the
+    // same utm string is readable in-app and in the Play Console.
+    if (pair[0] === 'android') url.searchParams.set('referrer', new URLSearchParams(params).toString());
+    link.href = url.toString();
+  });
+})();
+</script>
+</body>
+</html>
