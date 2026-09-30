@@ -2,21 +2,21 @@
 
 ## Quick Facts
 
-**Name:** Puking Cat The Game  
-**Tagline:** Your cat has one job: ruin the room.  
-**Developer:** Ivanna Kaceviča  
-**Genre:** Casual mobile game  
-**Platforms:** iPhone, iPad, Android  
-**Language at launch:** English  
-**Released:** 4 August 2026  
-**Requires:** iOS 15.0 or later  
-**Age rating:** 9+  
-**Price:** Free with ads  
-**Subscription:** Optional Remove Ads subscription removes full-screen ads  
-**Website:** https://happycode.studio/pukingcat/  
-**App Store:** https://apps.apple.com/app/id6787404657  
-**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat  
-**Press contact:** info@happycode.studio  
+**Name:** Puking Cat The Game<br>
+**Tagline:** Your cat has one job: ruin the room.<br>
+**Developer:** Ivanna Kaceviča<br>
+**Genre:** Casual mobile game<br>
+**Platforms:** iPhone, iPad, Android<br>
+**Language at launch:** English<br>
+**Released:** 4 August 2026<br>
+**Requires:** iOS 15.0 or later<br>
+**Age rating:** 9+<br>
+**Price:** Free with ads<br>
+**Subscription:** Optional Remove Ads subscription removes full-screen ads<br>
+**Website:** https://happycode.studio/pukingcat/<br>
+**App Store:** https://apps.apple.com/app/id6787404657<br>
+**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat<br>
+**Press contact:** info@happycode.studio<br>
 
 ---
 
@@ -156,13 +156,13 @@ The uncompressed 1920x886 master is available on request.
 
 ## Links
 
-**Website / press kit:** https://happycode.studio/pukingcat/  
-**App Store:** https://apps.apple.com/app/id6787404657  
-**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat  
-**Facebook:** https://www.facebook.com/profile.php?id=61593791362879  
-**Privacy policy:** https://happycode.studio/terms/apps/Puking-Cat  
-**Support:** info@happycode.studio  
-**Product Hunt:** not launched yet  
+**Website / press kit:** https://happycode.studio/pukingcat/<br>
+**App Store:** https://apps.apple.com/app/id6787404657<br>
+**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat<br>
+**Facebook:** https://www.facebook.com/profile.php?id=61593791362879<br>
+**Privacy policy:** https://happycode.studio/terms/apps/Puking-Cat<br>
+**Support:** info@happycode.studio<br>
+**Product Hunt:** not launched yet<br>
 
 ---
 
@@ -170,6 +170,6 @@ The uncompressed 1920x886 master is available on request.
 
 For press, review codes, interviews, screenshots or other materials:
 
-**Studio:** Happy Code Studio  
-**Email:** info@happycode.studio  
-**Location:** Latvia  
+**Studio:** Happy Code Studio<br>
+**Email:** info@happycode.studio<br>
+**Location:** Latvia<br>
