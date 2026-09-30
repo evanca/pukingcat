@@ -1,7 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<title>Puking Cat | Funny Physics Game for iPhone, iPad and Android</title>
+<meta name="description" content="Play Puking Cat, a free physics timing game. Tap to choose your angle and power, splat furniture and chase three stars. Download for iPhone, iPad or Android.">
+<link rel="canonical" href="https://happycode.studio/pukingcat/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Puking Cat | Funny Physics Game">
+<meta property="og:description" content="Two taps to aim and launch. Make a mess, dodge the aquarium and chase three stars.">
+<meta property="og:url" content="https://happycode.studio/pukingcat/">
+<meta property="og:image" content="https://happycode.studio/pukingcat/assets/key-art.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <script>window.GA_MEASUREMENT_ID="G-7R9GHRN17S";</script>
@@ -10,6 +19,11 @@
 /* The dc runtime re-serialises inline styles ("repeat(3, 1fr)"), so each
    selector below matches on a fragment that survives that pass. */
 img,video{max-width:100%}
+.player-guide{max-width:1180px;box-sizing:border-box;margin:44px auto 0;padding:0 40px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30}
+.player-guide h2{font:700 25px/1.2 Archivo,sans-serif;color:#12160f;margin:28px 0 12px}
+.player-guide details{border-bottom:1px solid rgba(18,22,15,.18);padding:14px 0}
+.player-guide summary{cursor:pointer;font-weight:600}
+@media(max-width:620px){.player-guide{padding:0 22px}}
 @media (max-width:900px){
   [style*="max-width: 1180px"],[style*="max-width:1180px"],
   [style*="position: sticky"],[style*="position:sticky"]{padding-left:22px!important;padding-right:22px!important}
@@ -36,7 +50,7 @@ img,video{max-width:100%}
   <div style="position:sticky;top:0;z-index:20;background:#12160f;padding:11px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <div style="display:flex;align-items:center;gap:11px">
       <img src="assets/app-icon.png" alt="Puking Cat app icon" style="width:30px;height:30px;border-radius:7px;display:block">
-      <span style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#c6ff4f">PUKING CAT — PRESS KIT</span>
+      <span style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#c6ff4f">PUKING CAT · OFFICIAL GAME &amp; PRESS KIT</span>
     </div>
     <div style="display:flex;align-items:center;gap:26px">
       <a href="#facts" style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#9fae98;text-decoration:none" style-hover="color:#c6ff4f">FACTS</a>
@@ -50,12 +64,13 @@ img,video{max-width:100%}
 
   <div style="max-width:1180px;margin:0 auto;padding:44px 40px 0;display:grid;grid-template-columns:1.35fr .78fr;gap:48px;align-items:stretch">
     <div style="display:flex;flex-direction:column;justify-content:space-between">
-      <div style="display:inline-block;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.13em;color:#12160f;background:#c6ff4f;padding:5px 8px">MEDIA KIT · CLEARED FOR PUBLICATION</div>
-      <h1 style="margin:16px 0 0;max-width:20ch;font:800 60px/1 Archivo,sans-serif;letter-spacing:-.035em;text-wrap:balance">Your cat has one job: ruin the room.</h1>
-      <p style="margin:20px 0 0;max-width:52ch;font:400 17px/1.6 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Puking Cat is a casual mobile game where your cat tries to ruin the room by puking on as many things as possible. Free with ads on iPhone and iPad, with an optional subscription to remove them.</p>
+      <div style="display:inline-block;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.13em;color:#12160f;background:#c6ff4f;padding:5px 8px">FREE PHYSICS TIMING GAME</div>
+      <h1 style="margin:16px 0 0;max-width:20ch;font:800 clamp(34px,4.2vw,54px)/1.08 Archivo,sans-serif;letter-spacing:-.035em;text-wrap:balance">Puking Cat: funny physics game</h1>
+      <p style="margin:20px 0 0;max-width:52ch;font:400 17px/1.6 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Puking Cat is a free physics timing game for iPhone, iPad and Android. Tap once to lock the angle, then tap again to lock the power. Launch one drop at the furniture, dodge the aquarium and chase three stars.</p>
       <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:10px">
-        <a href="#assets" style="padding:14px 22px;background:#12160f;color:#c6ff4f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s,transform .15s" style-hover="background:#ff6a1f;color:#fff;transform:translateY(-2px)">DOWNLOAD FULL KIT ↓</a>
-        <a href="#shots" style="padding:14px 22px;border:1px solid rgba(18,22,15,.28);color:#12160f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:border-color .15s,background .15s" style-hover="background:#c6ff4f;border-color:#c6ff4f">SCREENSHOTS</a>
+        <a href="https://apps.apple.com/app/id6787404657" style="padding:14px 22px;background:#12160f;color:#c6ff4f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s,transform .15s" style-hover="background:#ff6a1f;color:#fff;transform:translateY(-2px)">DOWNLOAD ON THE APP STORE</a>
+        <a href="https://play.google.com/store/apps/details?id=studio.happycode.puking_cat" style="padding:14px 22px;border:1px solid rgba(18,22,15,.28);color:#12160f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:border-color .15s,background .15s" style-hover="background:#c6ff4f;border-color:#c6ff4f">GET IT ON GOOGLE PLAY</a>
+        <a href="#assets" style="padding:14px 12px;color:#c1440a;font:500 12px/1 'JetBrains Mono',monospace">PRESS KIT ↓</a>
       </div>
       <div style="margin-top:20px;font:400 11.5px/1.6 'JetBrains Mono',monospace;color:#4d5849">APP STORE: <a href="https://apps.apple.com/app/id6787404657" style="color:#c1440a">apps.apple.com/app/id6787404657</a> · WEBSITE: <a href="https://happycode.studio/pukingcat/" style="color:#c1440a">happycode.studio/pukingcat</a></div>
       <div id="facts" style="margin-top:28px;padding-top:22px;border-top:1px solid rgba(18,22,15,.18);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;scroll-margin-top:70px">
@@ -67,21 +82,21 @@ img,video{max-width:100%}
             <li>Cat costumes + collectible puke palettes</li>
             <li>Seasonal rooms and object layouts</li>
             <li>All gameplay levels free with ads</li>
-            <li>Optional ad-free subscription, no paywalled levels</li>
+            <li>Optional Remove Ads subscriptionscription, no paywalled levels</li>
           </ul>
         </div>
         <div>
           <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">QUICK FACTS</div>
           <div style="display:grid;grid-template-columns:auto 1fr;gap:7px 14px;font:400 12.5px/1.45 'JetBrains Mono',monospace">
-            <div style="color:#5f6a5b">GENRE</div><div>Casual mobile game</div>
-            <div style="color:#5f6a5b">PLATFORM</div><div>iPhone, iPad</div>
+            <div style="color:#5f6a5b">GENRE</div><div>Physics timing game</div>
+            <div style="color:#5f6a5b">PLATFORM</div><div>iPhone, iPad, Android</div>
             <div style="color:#5f6a5b">PRICE</div><div>Free with ads</div>
-            <div style="color:#5f6a5b">IAP</div><div>Optional ad-free sub</div>
-            <div style="color:#5f6a5b">LEVELS</div><div>Seasonal rooms, added regularly</div>
+            <div style="color:#5f6a5b">IAP</div><div>Optional Remove Ads subscription</div>
+            <div style="color:#5f6a5b">LEVELS</div><div>Home, vet clinic and more rooms</div>
             <div style="color:#5f6a5b">RELEASED</div><div>4 August 2026</div>
             <div style="color:#5f6a5b">REQUIRES</div><div>iOS 15.0 or later</div>
             <div style="color:#5f6a5b">RATING</div><div>9+</div>
-            <div style="color:#5f6a5b">LANGUAGE</div><div>English at launch</div>
+            <div style="color:#5f6a5b">LANGUAGE</div><div>See your store listing</div>
             <div style="color:#5f6a5b">DEV</div><div>Ivanna Kaceviča, Latvia</div>
           </div>
         </div>
@@ -93,12 +108,26 @@ img,video{max-width:100%}
     </div>
   </div>
 
+
+  <section id="how-to-play" class="player-guide">
+    <h2>How to play Puking Cat</h2>
+    <p>Tap the launch button once to stop the angle dial. Watch the power meter, then tap again to fire. Power controls how far your drop travels.</p>
+    <p>Aim for furniture and bonus targets. Watch slime drip onto objects below, avoid the aquarium and reach the target score before you run out of shots.</p>
+    <h2>Game questions</h2>
+    <details><summary>Is Puking Cat free?</summary><p>You can download and play for free. The game contains ads and in-app purchases. You can choose an optional Remove Ads subscription to remove full-screen ads.</p></details>
+    <details><summary>Can I play on iPhone, iPad or Android?</summary><p>Download the game from the <a href="https://apps.apple.com/app/id6787404657">App Store for iPhone and iPad</a> or <a href="https://play.google.com/store/apps/details?id=studio.happycode.puking_cat">Google Play for Android</a>.</p></details>
+    <details><summary>Do I need an account?</summary><p>You can play without creating an account. The game saves your progress on your device.</p></details>
+    <details><summary>Who made Puking Cat?</summary><p>Ivanna Kaceviča made Puking Cat in Latvia under Happycode Studio. You can read about the project on <a href="https://devpost.com/software/puking-cat-the-game">Devpost</a> or contact <a href="mailto:info@happycode.studio">info@happycode.studio</a> for press enquiries.</p></details>
+    <h2>Watch the gameplay</h2>
+    <p><a href="https://youtu.be/AISXPHAope4">Watch the Puking Cat gameplay video on YouTube</a>, or browse the screenshots and download the press kit below.</p>
+  </section>
+
   <div id="about" style="max-width:1180px;margin:44px auto 0;padding:0 40px;display:grid;grid-template-columns:1.4fr 1fr;gap:52px;scroll-margin-top:70px">
     <div>
       <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">ABOUT THE GAME</div>
       <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Puking Cat turns a familiar cat-owner problem into the whole point of the game. The cat is not sick by accident — it is trying to cause damage. Players aim the puke at furniture, food, plants, books and anything else within reach; the more objects hit, the bigger the mess and the better the score.</p>
-      <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Levels are short and replayable with a three-star score to chase. Players earn Puke Coins and spend them on cat costumes and collectible puke palettes. New levels arrive regularly, following the calendar from autumn and Halloween through winter, spring and summer.</p>
-      <p style="margin:0;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">It is not a cat simulator and not a game about cleaning up after a pet. The joke is narrower: cats somehow puke on exactly the things you wish they would avoid. That becomes the mechanic.</p>
+      <p style="margin:0 0 12px;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">Levels are short and replayable with a three-star score to chase. Players earn Puke Coins and spend them on cat costumes and collectible puke palettes. You can replay a room to improve your score and try a different angle.</p>
+      <p style="margin:0;font:400 15px/1.65 Archivo,sans-serif;color:#333a30;text-wrap:pretty">You choose where the cat makes its mess. Aim for bonus targets and keep the slime away from hazards.</p>
     </div>
     <div>
       <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#5f6a5b;margin-bottom:12px">WHY IT EXISTS</div>
@@ -178,7 +207,7 @@ img,video{max-width:100%}
       </div>
       <a href="mailto:info@happycode.studio" style="padding:15px 24px;background:#12160f;color:#c6ff4f;font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-decoration:none;transition:background .15s" style-hover="background:#ff6a1f;color:#fff">info@happycode.studio →</a>
     </div>
-    <div style="margin-top:20px"><a href="https://www.producthunt.com/products/puking-cat-the-game?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-puking-cat-the-game" target="_blank" rel="noopener noreferrer" aria-label="Puking Cat The Game on Product Hunt" style="display:inline-block;line-height:0"><img alt="Puking Cat The Game - Your cat has one job: ruin the room. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1227536&amp;theme=light&amp;t=1787491159815" style="display:block"></a></div>
+    <div style="margin-top:20px"><a href="https://www.producthunt.com/products/puking-cat-the-game?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-puking-cat-the-game" target="_blank" rel="noopener noreferrer" aria-label="Puking Cat The Game on Product Hunt" style="display:inline-block;line-height:0"><img alt="Puking Cat The Game - Puking Cat: funny physics game | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1227536&amp;theme=light&amp;t=1787491159815" style="display:block"></a></div>
     <div style="margin-top:16px;font:400 11px/1.9 'JetBrains Mono',monospace;letter-spacing:.06em;color:#5f6a5b">PRIVACY: <a href="https://happycode.studio/terms/apps/Puking-Cat" style="color:#c1440a">happycode.studio/terms/apps/Puking-Cat</a> · SUPPORT: <a href="mailto:info@happycode.studio" style="color:#c1440a">info@happycode.studio</a> · FACEBOOK: <a href="https://www.facebook.com/profile.php?id=61593791362879" style="color:#c1440a">Puking Cat Game</a></div><div id="credit" style="margin-top:16px;display:flex;justify-content:space-between;font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#5f6a5b"><span>PUKING CAT THE GAME · MADE IN LATVIA BY IVANNA KACEVIČA</span><span>MEDIA KIT 2026</span></div>
   </div>
 </div>
