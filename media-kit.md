@@ -6,15 +6,16 @@
 **Tagline:** Your cat has one job: ruin the room.  
 **Developer:** Ivanna Kaceviča  
 **Genre:** Casual mobile game  
-**Platforms:** iPhone, iPad  
+**Platforms:** iPhone, iPad, Android  
 **Language at launch:** English  
 **Released:** 4 August 2026  
 **Requires:** iOS 15.0 or later  
 **Age rating:** 9+  
 **Price:** Free with ads  
-**Subscription:** Optional subscription removes ads  
+**Subscription:** Optional Remove Ads subscription removes full-screen ads  
 **Website:** https://happycode.studio/pukingcat/  
 **App Store:** https://apps.apple.com/app/id6787404657  
+**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat  
 **Press contact:** info@happycode.studio  
 
 ---
@@ -43,7 +44,7 @@ Levels are short and replayable, with a three-star score to chase. Players earn 
 
 The game is built around a steady stream of new rooms and seasonal themes. The plan is to release three new levels per day, with new environments, object layouts and things to ruin throughout the year.
 
-All levels are free to play with ads. An optional subscription removes the ads without locking any gameplay behind a paywall.
+All levels are free to play with ads. An optional Remove Ads subscription removes full-screen ads.
 
 ---
 
@@ -81,8 +82,8 @@ The puke itself is also part of the collection system, with different colors, th
 - Seasonal rooms and object layouts
 - Three new levels planned per day
 - All gameplay levels free with ads
-- Optional ad-free subscription
-- iPhone and iPad support
+- Optional subscription removes full-screen ads
+- iPhone, iPad and Android support
 
 ---
 
@@ -114,7 +115,7 @@ I care a lot about small UI details, polish and making the game feel deliberate,
 
 ## Press Boilerplate
 
-**Puking Cat The Game** is a casual mobile game where the player helps a mischievous cat cause as much damage as possible by puking across rooms full of furniture, food, plants and other objects. Players earn Puke Coins, collect costumes and puke palettes, and return to new seasonal levels. The game is available on iPhone and iPad. All levels are free with ads, with an optional subscription to remove them.
+**Puking Cat The Game** is a casual mobile game where the player helps a mischievous cat cause as much damage as possible by puking across rooms full of furniture, food, plants and other objects. Players earn Puke Coins, collect costumes and puke palettes, and return to new seasonal levels. The game is available on iPhone, iPad and Android. All levels are free with ads, with an optional subscription to remove full-screen ads.
 
 ---
 
@@ -157,6 +158,7 @@ The uncompressed 1920x886 master is available on request.
 
 **Website / press kit:** https://happycode.studio/pukingcat/  
 **App Store:** https://apps.apple.com/app/id6787404657  
+**Google Play:** https://play.google.com/store/apps/details?id=studio.happycode.puking_cat  
 **Facebook:** https://www.facebook.com/profile.php?id=61593791362879  
 **Privacy policy:** https://happycode.studio/terms/apps/Puking-Cat  
 **Support:** info@happycode.studio  
